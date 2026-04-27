@@ -23,6 +23,16 @@
 - **Results:** Output verified ($C[0][0] = 64.0$ for $N=32$ with $A=1.0, B=2.0$). 
 - **Significance:** Confirmed the foundational logic for tiled matrix operations, a prerequisite for understanding the specialized 16x8 TCU-blocks in Voltrix-SpMM.
 
+---
+[mozler@a109:~ 468174]$ nano gemm.cu
+
+[mozler@a109:~ 468174]$ nvcc gemm.cu -o gemm
+
+[mozler@a109:~ 468174]$ ./gemm
+Matris Carpimi Sonucu [0][0]: 64
+
+---
+
 ## 3. Profiling Insights
 - Standard CUDA kernels do not trigger Tensor Core units.
 - Attempting to measure `gpu__compute_epipe_tensor_op_utilization` on non-MMA kernels resulted in error code 9, confirming that specialized Tensor Core instructions (like those in Voltrix-SpMM) are required for these metrics.
