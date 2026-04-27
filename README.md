@@ -16,13 +16,15 @@
 
 ## Isınma Turları ve GPU Profiling (27.04.2026)
 
-## 2. Deney 1: Vektör Toplama (VectorAdd)
+## 2. Deneyler
+
+### Deney 1: Vektör Toplama (VectorAdd)
 - **Amaç:** CUDA derleme ve temel bellek transferi kontrolü.
 - **Sonuç:** Başarıyla çalıştırıldı (1.0 + 2.0 = 3.0).
 - **Profiling:** NCU ile DRAM Throughput ölçüldü (%0.98).
 
   
-## 3. Deney 2: Vektör Toplama (VectorAdd)
+### Deney 2: Vektör Toplama (VectorAdd)
 - **Amaç:** CUDA derleme ve temel bellek transferi kontrolü.
 - **Sonuç:** Başarıyla çalıştırıldı (1.0 + 2.0 = 3.0).
 - **Profiling:** NCU ile DRAM Throughput ölçüldü (%0.98).
