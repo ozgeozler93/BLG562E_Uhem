@@ -18,9 +18,10 @@
 - **Results:** Executed successfully with correct output (1.0 + 2.0 = 3.0).
 - **Profiling:** Measured using `ncu`. DRAM Throughput reached ~0.98% of peak for this minimal workload.
 
-### Experiment 2: Matrix Multiplication (gemm.cu) - *Upcoming*
-- **Objective:** Understand 2D grid/block indexing and shared memory patterns.
-- **Significance:** Essential for understanding the **TCU Block** (16x8) processing logic used in the Voltrix-SpMM paper.
+### Experiment 2: Matrix Multiplication (gemm.cu)
+- **Objective:** Validating 2D grid/block indexing and global memory access.
+- **Results:** Output verified ($C[0][0] = 64.0$ for $N=32$ with $A=1.0, B=2.0$). 
+- **Significance:** Confirmed the foundational logic for tiled matrix operations, a prerequisite for understanding the specialized 16x8 TCU-blocks in Voltrix-SpMM.
 
 ## 3. Profiling Insights
 - Standard CUDA kernels do not trigger Tensor Core units.
