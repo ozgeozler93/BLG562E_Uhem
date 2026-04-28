@@ -122,7 +122,7 @@ int main() {
 }
 
 ```
-
+<details>
 <summary><b>View matrixMul.cu</b></summary>
 
 ```cpp
