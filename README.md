@@ -120,7 +120,9 @@ int main() {
     return 0;
 }
 
+<summary><b>View matrixMul.cu</b></summary>
 
+```cpp
 #include <iostream>
 #include <cuda_runtime.h>
 
