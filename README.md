@@ -5,7 +5,7 @@
 - **Access:** Established via VPN and SSH to `altay.uhem.itu.edu.tr`.
 
 - **Step 1:** VPN & SSH Access
-Access the UHeM network via VPN, then connect to the login node:
+'Access the UHeM network via VPN, then connect to the login node:
 
 Command: ssh <user_name>@altay.uhem.itu.edu.tr
 
