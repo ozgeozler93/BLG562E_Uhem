@@ -74,6 +74,7 @@ Matris Carpimi Sonucu [0][0]: 64
 
 <details>
 <summary><b>View vectorAdd.cu</b></summary>
+<summary><b>View matrixMul.cu</b></summary>
 
 ```cpp
 #include <iostream>
@@ -120,8 +121,7 @@ int main() {
     return 0;
 }
 
-<details>
-<summary><b>View matrixMul.cu</b></summary>
+
 
 ```cpp
 #include <iostream>
