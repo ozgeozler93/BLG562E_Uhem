@@ -125,7 +125,7 @@ int main() {
 </details>
 
 
-   
+<details>  
 <summary><b>View matrixMul.cu</b></summary>
 
 
