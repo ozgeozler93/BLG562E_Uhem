@@ -120,6 +120,7 @@ int main() {
     return 0;
 }
 
+<details>
 <summary><b>View matrixMul.cu</b></summary>
 
 ```cpp
