@@ -3,8 +3,36 @@
 
 ## 0. Connection and Environment Setup
 - **Access:** Established via VPN and SSH to `altay.uhem.itu.edu.tr`.
-- **Job Scheduling:** Interactive session initiated using SLURM:  
-  `srun -p gpu2dq --gres=gpu:1 -n 1 --pty bash`
+
+- **Step 1:** VPN & SSH Access
+Access the UHeM network via VPN, then connect to the login node:
+
+Command: ssh <user_name>@altay.uhem.itu.edu.tr
+
+Username: mozler
+
+Password: [Your UHeM Password]
+
+- **Step 2:** Requesting GPU Resources (Interactive Session)
+To move from the login node to a GPU-enabled compute node:
+
+Command: srun -p gpu2dq --gres=gpu:1 -n 1 --pty bash
+
+Note: This allocates 1 NVIDIA A100 GPU and 1 CPU core under the project utcfsm.
+
+- **Step 3:** Environment Configuration
+Once inside the compute node (e.g., a109), load the necessary software stack:
+
+Command: module load cuda/cuda-12.5-a100q
+
+Verification: nvcc --version & nvidia-smi
+
+- **Step 4:** GitHub Integration (Personal Access Token)
+When pushing changes to GitHub, use a Personal Access Token (PAT) instead of your password:
+
+Username: ozgeozler93
+
+Password/Token: ghp_XXXXXXXXXXXXXXXXXXXX (Use your generated PAT)
 
 ## 1. System Specifications
 - **Cluster:** Altay
