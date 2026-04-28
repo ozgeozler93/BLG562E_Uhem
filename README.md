@@ -70,7 +70,12 @@ Matris Carpimi Sonucu [0][0]: 64
 
 ---
 
+## 5. Source Codes
 
+<details>
+<summary><b>View vectorAdd.cu</b></summary>
+
+```cpp
 #include <iostream>
 #include <cuda_runtime.h>
 
@@ -115,8 +120,6 @@ int main() {
     return 0;
 }
 
-
-----
 
 #include <iostream>
 #include <cuda_runtime.h>
@@ -165,4 +168,3 @@ int main() {
     free(h_A); free(h_B); free(h_C);
     return 0;
 }
-
