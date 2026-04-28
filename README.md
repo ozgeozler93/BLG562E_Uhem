@@ -74,7 +74,7 @@ Matris Carpimi Sonucu [0][0]: 64
 
 <details>
 <summary><b>View vectorAdd.cu</b></summary>
-<summary><b>View matrixMul.cu</b></summary>
+
 
 ```cpp
 #include <iostream>
@@ -123,7 +123,6 @@ int main() {
 
 
 
-```cpp
 #include <iostream>
 #include <cuda_runtime.h>
 
@@ -160,12 +159,17 @@ int main() {
     cudaMemcpy(d_B, h_B, bytes, cudaMemcpyHostToDevice);
 
     dim3 threads(THREADS_PER_BLOCK, THREADS_PER_BLOCK);
-    dim3 grid((N + THREADS_PER_BLOCK - 1) / THREADS_PER_BLOCK, (N + THREADS_PER_BLOCK - 1) / THREADS_PER_BLOCK);
+    dim3 grid((N + 15) / 16, (N + 15) / 16);
 
     matrixMul<<<grid, threads>>>(d_A, d_B, d_C, N);
     cudaMemcpy(h_C, d_C, bytes, cudaMemcpyDeviceToHost);
 
-    std::cout << "GEMM Result [0][0]: " << h_C[0] << " (Expected: 64)" << std::endl;
+    std::cout << "GEMM Result [0][0]: " << h_C[0] << std::endl;
+
+    cudaFree(d_A); cudaFree(d_B); cudaFree(d_C);
+    free(h_A); free(h_B); free(h_C);
+    return 0;
+}
 
     cudaFree(d_A); cudaFree(d_B); cudaFree(d_C);
     free(h_A); free(h_B); free(h_C);
